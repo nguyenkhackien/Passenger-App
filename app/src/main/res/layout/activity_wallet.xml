@@ -184,63 +184,64 @@
         </LinearLayout>
 
         <RelativeLayout
+            android:id="@+id/relativeShowAddMoney"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/relativeShowAddMoney"
-            android:visibility="visible"
-            android:layout_below="@id/linear_buttons">
+            android:layout_below="@id/linear_buttons"
+            android:layout_marginTop="20dp"
+            android:visibility="visible">
 
             <EditText
+                android:id="@+id/edt_money"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
+                android:layout_alignParentTop="true"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/edt_location_background"
                 android:hint="Enter amount"
                 android:inputType="numberDecimal"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="20dp"
                 android:padding="10dp"
-                android:id="@+id/edt_money"
-                android:textColorHint="@color/secondary_text"
-                android:textColor="@color/primary_text"/>
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/secondary_text" />
+
 
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="23dp"
+                android:id="@+id/buttonOk"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="19dp"
                 android:background="@drawable/button_background"
                 android:text="ok"
-                android:id="@+id/buttonOk"
-                android:layout_alignParentTop="true"
-                android:textColor="@color/white"
-                android:layout_marginEnd="20dp"/>
-
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background_grey_line"
                 android:text="Confirm"
-                android:id="@+id/buttonConfirm"
-                android:textColor="@color/white"
-                android:background="@drawable/button_background_grey_line"/>
+                android:textColor="@color/white" />
 
 
             <TextView
+                android:id="@+id/text_formatted_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Money"
-                android:textStyle="bold"
                 android:layout_below="@id/edt_money"
                 android:layout_centerHorizontal="true"
-                android:textSize="32sp"
-                android:visibility="gone"
                 android:layout_marginTop="60dp"
+                android:text="Money"
                 android:textColor="@color/primary_text"
-                android:id="@+id/text_formatted_money" />
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/text_confirmation"
@@ -248,12 +249,12 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@id/buttonConfirm"
                 android:layout_centerHorizontal="true"
-                android:visibility="gone"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Are you sure to add this amount of money to L-Wallet?"
                 android:textColor="@color/secondary_text"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:visibility="gone" />
 
         </RelativeLayout>
 
