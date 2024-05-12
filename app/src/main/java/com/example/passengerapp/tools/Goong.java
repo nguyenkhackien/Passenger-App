@@ -13,8 +13,8 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.lightning.adapters.PlaceAdapter;
-import com.example.lightning.models.Place;
+import com.example.passengerapp.adapters.PlaceAdapter;
+import com.example.passengerapp.models.Place;
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONArray;

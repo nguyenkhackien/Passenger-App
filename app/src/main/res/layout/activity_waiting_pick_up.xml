@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WaitingPickUp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/layout_statusUpdate"
+        android:layout_marginBottom="-30dp">
+        <fragment
+            android:id="@+id/fragment_maps"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_maps"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/layout_choosePlace">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edt_pickUpPos"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:singleLine="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/edt_location_background"
+            android:hint=" Your location"
+            android:drawableStart="@drawable/blue_pin"
+            android:textColorHint="@color/secondary_text"
+            android:textColor="@color/primary_text"
+            android:focusableInTouchMode="false"
+            android:maxLines="1"
+            android:padding="10dp"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edt_pickUpPos"
+            android:id="@+id/edt_dropOfPos"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edt_location_background"
+            android:layout_marginTop="5dp"
+            android:hint=" Choose destination"
+            android:drawableStart="@drawable/red_pin"
+            android:focusableInTouchMode="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColorHint="@color/secondary_text"
+            android:textColor="@color/primary_text"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@id/layout_bottom"
+        android:background="@drawable/bottom_layout_blue"
+        android:paddingBottom="30dp"
+        android:layout_marginBottom="-30dp"
+        android:id="@+id/layout_statusUpdate">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/soon"
+                android:id="@+id/img_soon"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/img_soon"
+                android:text="Driver is coming in"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_timeLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/text_status"
+                android:background="@drawable/button_background_ghost_white"
+                android:text="N/A"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_distanceLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingHorizontal="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/text_timeLeft"
+                android:text="N/A"
+                android:background="@drawable/button_background_ghost_white"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/focus"
+        android:id="@+id/img_focusOnMe"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/circle_image_background"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@id/layout_statusUpdate"
+        android:layout_marginEnd="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_layout_background"
+        android:id="@+id/layout_bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:visibility="visible"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/layout_driverInfo">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_driverAndVehicleInfo"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="15dp"
+                android:layout_above="@id/layout_connection">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="34P7 - 12345"
+                    android:textSize="26sp"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:id="@+id/text_plateNumber"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Honda Wave S"
+                    android:textSize="23sp"
+                    android:layout_below="@id/text_plateNumber"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:id="@+id/text_vehicleName"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/user_blue"
+                    android:id="@+id/img_driver"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/frame_driver_name"
+                    android:text="Nguyễn Văn ABCD"
+                    android:id="@+id/textDriverName"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/secondary_text"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_line"
+                    android:layout_below="@id/img_driver"
+                    android:id="@+id/frame_driver_name"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_line"
+                    android:layout_below="@id/textDriverName"
+                    android:id="@+id/frame_payment"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/text_paymentAttention"
+                        android:layout_alignParentTop="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_money"
+                        android:text="123,456 đ"
+                        android:textColor="@color/secondary_text"
+                        android:textStyle="bold"
+                        android:layout_below="@id/text_paymentAttention"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true"/>
+
+                    <TextView
+                        android:id="@+id/text_paymentMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_below="@id/text_paymentAttention"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="1dp"
+                        android:background="@drawable/button_background_grey_line"
+                        android:layout_toEndOf="@id/text_money"
+                        android:text="Cash"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_above="@id/buttonCancel"
+                android:orientation="horizontal"
+                android:id="@+id/layout_connection"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/layout_call"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/call"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"
+                            android:text="Call"/>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_line"
+                        android:layout_alignParentEnd="true"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/layout_chat"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/comments"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"
+                            android:text="Chat"/>
+
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_line"
+                        android:layout_alignParentStart="true"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/button_background_red"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/buttonCancel"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

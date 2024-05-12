@@ -223,13 +223,13 @@ public class SignUpActivity extends AppCompatActivity {
                 passenger.setId(Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid());
                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
-                firebaseDatabase.getReference().child("Passengers").child(passenger.getId())
+                firebaseDatabase.getReference().child("users").child("passengers").child(passenger.getId())
                         .setValue(passenger)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 progressDialog.dismiss();
-                                Toast.makeText(context, "Welcome to Lightning!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "Welcome", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(context, MainActivity.class);
                                 startActivity(intent);
                                 finish();
