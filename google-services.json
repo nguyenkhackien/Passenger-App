@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "419307277330",
+    "firebase_url": "https://driver-app-69695-default-rtdb.firebaseio.com",
+    "project_id": "driver-app-69695",
+    "storage_bucket": "driver-app-69695.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419307277330:android:63a3534569f6a1ac161ccb",
+        "android_client_info": {
+          "package_name": "com.example.driverapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvOuv4-wHI80dlold8QdqurP8myGkKqpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419307277330:android:0e70a9935efd1a1a161ccb",
+        "android_client_info": {
+          "package_name": "com.example.driverapp.Activities"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvOuv4-wHI80dlold8QdqurP8myGkKqpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419307277330:android:34417b8248fbc304161ccb",
+        "android_client_info": {
+          "package_name": "com.example.passengerapp.Activities"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvOuv4-wHI80dlold8QdqurP8myGkKqpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

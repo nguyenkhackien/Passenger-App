@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Passenger App</string>
+    <string name="welcome">Welcome to Passenger App!</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log in account</string>
+    <string name="phone_number">Phone number</string>
+    <string name="password">Password</string>
+    <string name="switch_to_signup">Sign up!</string>
+    <string name="tap_to_upload_your_image">Tap to upload your Image</string>
+    <string name="please_enter_your_name">Please enter your name</string>
+    <string name="switch_to_login">Already have an account? Tap here to Log in!</string>
+    <string name="lightning">Lightning</string>
+    <string name="your_phone_number">Your phone number</string>
+    <string name="your_email">Your email</string>
+    <string name="your_password">Your password</string>
+    <string name="your_password_again">Your password again</string>
+    <string name="create_new_account">Create new account</string>
+</resources>
