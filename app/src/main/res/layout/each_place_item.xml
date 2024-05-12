@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginVertical="5dp"
+    android:layout_marginHorizontal="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="144 Xuan Thuy"
+        android:layout_alignParentTop="true"
+        android:id="@+id/text_main"
+        android:textColor="@color/primary_text"
+        android:gravity="center_vertical"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_main"
+        android:id="@+id/text_secondary"
+        android:textColor="@color/secondary_text"
+        android:text="Dich Vong Hau, Cau Giay, Ha Noi"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

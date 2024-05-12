@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.LoginActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imgLogo"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Welcome back to Passenger!"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/imgLogo"
+        android:id="@+id/edt_email"
+        android:inputType="textEmailAddress"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/primary_text"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/your_email"
+        android:textColorHint="@color/secondary_text" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_email"
+        android:id="@+id/edt_password"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/primary_text"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/secondary_text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/edt_password"
+        android:layout_marginTop="25dp"
+        android:id="@+id/buttonLogin"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/log_in"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_switchToSignUp"
+        android:text="@string/switch_to_signup"
+        android:layout_below="@id/buttonLogin"
+        android:textColor="@color/secondary_text"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

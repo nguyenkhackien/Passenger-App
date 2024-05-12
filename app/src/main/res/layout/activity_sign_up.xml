@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignUpActivity"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/temp_user" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_uploadImage"
+        android:layout_below="@id/img_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="16sp"
+        android:text="@string/tap_to_upload_your_image"
+        android:textColor="@color/secondary_text" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/img_profile"
+        android:id="@+id/edt_name"
+        android:inputType="text"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        android:padding="10dp"
+        android:textColor="@color/primary_text"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/please_enter_your_name"
+        android:textColorHint="@color/secondary_text" />
+
+    <EditText
+        android:textColor="@color/primary_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_name"
+        android:id="@+id/edt_phoneNumber"
+        android:inputType="phone"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/your_phone_number"
+        android:textColorHint="@color/secondary_text" />
+
+    <EditText
+        android:textColor="@color/primary_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_phoneNumber"
+        android:id="@+id/edt_email"
+        android:inputType="textEmailAddress"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/your_email"
+        android:textColorHint="@color/secondary_text" />
+
+    <EditText
+        android:textColor="@color/primary_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_email"
+        android:id="@+id/edt_password"
+        android:inputType="textPassword"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/your_password"
+        android:textColorHint="@color/secondary_text" />
+
+    <EditText
+        android:textColor="@color/primary_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_password"
+        android:id="@+id/edt_password_again"
+        android:inputType="textPassword"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/your_password_again"
+        android:textColorHint="@color/secondary_text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSignUp"
+        android:text="@string/create_new_account"
+        android:layout_below="@id/edt_password_again"
+        android:textAllCaps="false"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/text_switchToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="75dp"
+        android:text="@string/switch_to_login"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp" />
+
+
+
+</RelativeLayout>

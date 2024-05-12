@@ -1,4 +1,4 @@
-package com.example.passengerapp.Activities;
+package com.example.passengerapp.activities;
 
 import android.os.Bundle;
 
