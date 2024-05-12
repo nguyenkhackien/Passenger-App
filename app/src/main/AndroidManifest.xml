@@ -28,8 +28,6 @@
         tools:targetApi="31">
 
 
-        <service android:name=".services.MyLocationServices" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBnAt55k76eKM9_3OSJEwUzOvZFbph6RGM" />
@@ -89,6 +87,12 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <service
+            android:name=".services.MyLocationServices"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity
             android:name=".activities.WaitingPickUp"
             android:exported="false">
@@ -110,6 +114,14 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".activities.ChooseDestinationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
 
     </application>
 

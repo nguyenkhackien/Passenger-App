@@ -48,7 +48,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation("com.google.android.gms:play-services-location:21.0.0")
     implementation("com.squareup.picasso:picasso:2.71828")
-    implementation ("com.android.volley:volley:1.2.0")
+    implementation ("com.android.volley:volley:1.2.1")
     implementation ("com.google.android.libraries.places:places:2.4.0")
     implementation ("com.google.maps.android:android-maps-utils:1.3.1")
 
