@@ -317,8 +317,7 @@ public class WaitingPickUp extends AppCompatActivity implements OnMapReadyCallba
     private void getDriverInfo(String driverId) {
         if (driverId != null) {
             FirebaseDatabase.getInstance().getReference()
-                    .child("users")
-                    .child("drivers")
+                    .child("Drivers")
                     .child(driverId)
                     .addValueEventListener(new ValueEventListener() {
                         @Override

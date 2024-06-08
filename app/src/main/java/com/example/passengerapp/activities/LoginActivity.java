@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            FirebaseDatabase.getInstance().getReference().child("users").child("passengers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                            FirebaseDatabase.getInstance().getReference().child("Passengers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     Toast.makeText(LoginActivity.this, "Welcome!", Toast.LENGTH_SHORT).show();
@@ -140,7 +140,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void getPassengerEmails() {
-        FirebaseDatabase.getInstance().getReference().child("users").child("passengers")
+        FirebaseDatabase.getInstance().getReference().child("Passenger")
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {

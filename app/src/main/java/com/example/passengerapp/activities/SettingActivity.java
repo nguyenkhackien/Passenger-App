@@ -93,7 +93,7 @@ public class SettingActivity extends AppCompatActivity {
 
     private void loadUserData() {
         FirebaseDatabase.getInstance().getReference()
-                .child("Passengers")
+                .child("Passenger")
                 .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override

@@ -104,7 +104,6 @@ public class SearchForDriverActivity extends AppCompatActivity implements OnMapR
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_for_driver);
-
         init();
         listener();
     }
@@ -123,6 +122,7 @@ public class SearchForDriverActivity extends AppCompatActivity implements OnMapR
     private void cancelTrip() {
         if (trip != null) {
             trip.setStatus(Const.cancelByPassenger);
+            Toast.makeText(SearchForDriverActivity.this, trip.getStatus(),Toast.LENGTH_SHORT).show();
             FirebaseDatabase.getInstance().getReference()
                     .child("Trips")
                     .child(trip.getId())

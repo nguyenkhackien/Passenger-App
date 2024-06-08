@@ -269,7 +269,7 @@ public class ChooseDestinationActivity extends AppCompatActivity implements OnMa
                                 motorIsChosen = true;
                                 carIsChosen = false;
                             } else {
-                                Toast.makeText(ChooseDestinationActivity.this, "Your L-Wallet balance smaller than this trip's cost!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ChooseDestinationActivity.this, "Your Wallet balance smaller than this trip's cost!", Toast.LENGTH_SHORT).show();
                             }
                         }
                     } else {
@@ -294,7 +294,8 @@ public class ChooseDestinationActivity extends AppCompatActivity implements OnMa
                                 motorIsChosen = false;
                                 carIsChosen = true;
                             } else {
-                                Toast.makeText(ChooseDestinationActivity.this, "Your L-Wallet balance smaller than this trip's cost!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ChooseDestinationActivity.this, "Your Wallet balance smaller than this trip's cost!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ChooseDestinationActivity.this, "Your Wallet balance smaller than this trip's cost!", Toast.LENGTH_SHORT).show();
                             }
                         }
                     } else {

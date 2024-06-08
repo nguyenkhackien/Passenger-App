@@ -223,7 +223,7 @@ public class SignUpActivity extends AppCompatActivity {
                 passenger.setId(Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid());
                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
-                firebaseDatabase.getReference().child("users").child("passengers").child(passenger.getId())
+                firebaseDatabase.getReference().child("Passenger").child(passenger.getId())
                         .setValue(passenger)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override

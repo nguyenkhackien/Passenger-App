@@ -144,8 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getPassengerInfo() {
         FirebaseDatabase.getInstance().getReference()
-                .child("users")
-                .child("passengers")
+                .child("Passenger")
                 .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
